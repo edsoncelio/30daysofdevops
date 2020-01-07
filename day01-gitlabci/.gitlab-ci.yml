@@ -1,0 +1,8 @@
+develop:
+  stage: deploy
+  script:
+  - gem install dpl
+  - dpl --provider=heroku --app=demo-app-gitlab --api-key=$HEROKU_STAGING_API_KEY
+  only:
+  - develop
+
